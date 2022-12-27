@@ -1,0 +1,33 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 12px;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    overflow: visible;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    line-height: 85%;
+}
+

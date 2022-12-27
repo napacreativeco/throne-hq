@@ -1,0 +1,36 @@
+html,
+html *,
+body,
+body *,
+.app * {
+  cursor: none;
+}
+
+
+.cursor-dot,
+.cursor-dot-outline {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+  z-index: 999999;
+}
+
+.cursor-dot {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0px solid #fff;
+  mix-blend-mode: exclusion;
+}
+
+.cursor-dot-outline {
+  display: none;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0);
+}

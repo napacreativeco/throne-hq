@@ -1,0 +1,41 @@
+/* Sections */
+section.projects {
+    padding: 140px var(--column-padding);
+}
+section.projects .section-title {
+    margin: 0 0 20px 0;
+}
+/* Link */
+section.projects .link {
+    display: block;
+    padding: 60px 0;
+}
+/* Text */
+section.projects .text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+/* Title */
+section.projects .h1 {
+    font-size: 8vw;
+    line-height: 0.9;
+    letter-spacing: -0.6vw;
+    margin: 0;
+}
+/* Accent number */
+.link span.accent {
+    font-size: 1.5rem;
+    margin: 10px 0 0 8px;
+}
+
+/*
+ *
+ * Media Queries
+ *
+ */
+@media screen and (max-width: 767px) {
+    section.projects {
+        padding: 80px 20px;
+    }
+}

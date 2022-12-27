@@ -1,0 +1,38 @@
+:root {
+    --black: #191919;
+    --white: #f1f1f1;
+    --grey: #585858;
+    --line-color: #383838;
+    --line-thickness: 1px;
+    --border: 1px solid var(--line-color);
+    --column-padding: 40px;
+}
+@media screen and (max-width: 767px) {
+    :root {
+        --column-padding: 20px;
+    }
+}
+/* Imports */
+@import 'global.scss';
+@import 'loading.scss';
+@import 'cursor.scss';
+@import 'fonts.scss';
+@import 'typography.scss';
+@import 'lines.scss';
+@import 'site-container.scss';
+@import 'navbar.scss';
+@import 'hamburgers.scss';
+@import 'overlay-menu.scss';
+@import 'marquee.scss';
+@import 'back-to-top.scss';
+@import 'footer.scss';
+
+
+/* Homepage */
+@import './home/hero.scss';
+@import './textFX.scss';
+@import './home/blocks.scss';
+@import './home/contact.scss';
+@import './home/hoverFX.scss';
+@import './home/project-list.scss';
+@import './home/case-study.scss';

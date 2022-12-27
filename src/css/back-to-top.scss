@@ -1,0 +1,25 @@
+.back-to-top {
+    display: block;
+    position: fixed;
+    z-index: 9999;
+    bottom: 20px;
+    right: 20px;
+}
+.back-to-top svg {
+    width: 50px;
+    transform: rotate(0deg);
+}
+.backtop-link {
+    display: block;
+    position: relative;
+    opacity: 0;
+}
+
+.backtop-show {
+    animation: flip-in 0.8s forwards;
+}
+
+@keyframes flip-in {
+    0% { transform: rotate(0deg); opacity: 0; margin-right: -50%; }
+    100% { transform: rotate(-135deg); opacity: 1; margin-right: 0%; }
+}

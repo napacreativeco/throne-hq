@@ -1,0 +1,57 @@
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.app::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.app {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow-x: hidden;
+    display: block !important;
+}
+
+#main-page {
+    position: relative;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.page--left-column {
+    padding: 20px 0;
+    position: relative;
+}
+.page--left-column::after {
+    content: '';
+    position: absolute;
+    bottom: 0%;
+    top: 0%;
+    right: 0;
+    background: var(--line-color);
+    width: var(--line-thickness);
+    animation: line-tall 1s ease-in-out forwards;
+}
+
+.page--right-column {
+    padding: 20px 0px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+@media screen and (max-width: 767px) {
+    #main-page {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+    .page--left-column {
+        display: none;
+    }
+    .page--right-column {
+        width: 100%;
+    }
+}

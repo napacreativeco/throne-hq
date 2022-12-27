@@ -1,0 +1,163 @@
+/* Static: Line Horizontal */
+.static__line-horizontal {
+    position: relative;
+}
+.static__line-horizontal::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    right: 0%;
+    background: var(--line-color);
+    height: 1px;
+}
+
+/* Anime: Line Vertical */
+.anime__line-vertical {
+    position: relative;
+    height: 0%;
+    background: var(--line-color);
+    width: 1px;
+    transition: height 1s;
+}
+.entered.anime__line-vertical {
+    height: 100%;
+}
+
+
+/* Anime: Line Horizontal */
+.anime__line-horizontal {
+    position: relative;
+    margin: 0 50%;
+    background: var(--line-color);
+    height: 1px;
+    transition: margin 1s;
+}
+.entered.anime__line-horizontal {
+    margin: 0 0%;
+    background: var(--line-color);
+    height: 1px;
+}
+
+/* Anime: Line Horizontal (From Left) */
+.anime__line-horizontal-from-left {
+    position: relative;
+    display: block;
+    background: var(--line-color);
+    width: 0%;
+    height: 1px;
+    transition: width 1s;
+}
+.entered.anime__line-horizontal-from-left {
+    width: 100%;
+}
+// .anime__line-horizontal-from-left::after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0;
+//     left: 0%;
+//     right: 100%;
+//     background: var(--line-color);
+//     height: 1px;
+//     transition: right 1s;
+// }
+// .entered.anime__line-horizontal-from-left::after {
+//     animation: line-horizontal-left 1s forwards;
+//     transition: right 1s;
+// }
+@keyframes line-horizontal-left {
+    0% { right: 100%; }
+    100% { right: 0%; }
+}
+
+
+
+
+
+/* 
+
+Below is for animated
+
+Vertical Line Animation */
+// @keyframes line-tall {
+//     0% { top: 50%; bottom: 50%; }
+//     100% { top: 0; bottom: 0; }
+// }
+
+// .entered-vert {
+//     position: relative;
+// }
+// .entered-vert::after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0%;
+//     top: 0%;
+//     right: 0;
+//     background: var(--line-color);
+//     width: var(--line-thickness);
+//     animation: line-tall 1s ease-in-out forwards;
+// }
+// .leaving-vert::after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0%;
+//     top: 0%;
+//     right: 0;
+//     background: var(--line-color);
+//     width: var(--line-thickness);
+//     animation: line-tall 1s ease-in-out forwards;
+// }
+
+// /* Horizontal Line Animation */
+// @keyframes line-wide {
+//     0% { left: 50%; right: 50%; }
+//     100% { left: 0; right: 0; }
+// }
+
+// .entered-horiz {
+//     position: relative;
+// }
+// .entered-horiz::after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0;
+//     left: 0%;
+//     right: 0%;
+//     background: var(--line-color);
+//     height: var(--line-thickness);
+//     animation: line-wide 1s ease-in-out forwards;
+// }
+
+// /* Horizontal Left Line Animation */
+// @keyframes line-wide-left {
+//     0% { left: 0%; right: 100%; }
+//     100% { left: 0%; right: 0%; }
+// }
+
+// .entered-horiz--left {
+//     position: relative;
+// }
+// .entered-horiz--left::after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0;
+//     left: 0%;
+//     right: 0%;
+//     background: var(--line-color);
+//     height: var(--line-thickness);
+//     animation: line-wide-left 1s ease-in-out forwards;
+//     -webkit-animation: line-wide-left 1s ease-in-out forwards;
+// }
+
+
+// @media screen and (max-width: 767px) {
+//     .entered-vert::after {
+//         bottom: 0;
+//         left: 0%;
+//         right: 0%;
+//         background: var(--line-color);
+//         height: var(--line-thickness);
+//         width: 100%;
+//         animation: line-wide 1s ease-in-out forwards;
+//     }
+// }

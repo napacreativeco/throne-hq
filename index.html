@@ -1,0 +1,669 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>throne</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="stylesheet" href="./dist/app.css">
+
+</head>
+
+<body class="body">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+  <!-- Loading Page -->
+  <div class="loading">
+    <div class="progress-bar">
+      <span class="progress">&nbsp;</span>
+    </div>
+
+    <svg class="main-logo" width="100%" height="100%" viewBox="0 0 41 36" version="1.1" xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+        <g>
+            <path rendering="geometricPrecision" d="M19.164,9.238l1.82,0l0,-7.748l3.3,-0l0,-1.49l-8.42,0l0,1.49l3.3,-0l0,7.748Z"
+                style="fill-rule:nonzero;" />
+            <path
+                rendering="geometricPrecision"
+                d="M14.287,22.438l1.82,0l-0,-9.238l-1.82,0l-0,3.696l-3.698,0l0,-3.696l-1.82,0l0,9.238l1.82,0l0,-4.052l3.698,-0l-0,4.052Z"
+                style="fill-rule:nonzero;" />
+            <path
+                rendering="geometricPrecision"
+                d="M24.754,22.438l1.82,0l0,-3.537l1.348,-0c1.59,-0 1.657,0.462 1.736,1.518l0.145,2.019l1.847,0l-0.145,-1.848c-0.145,-1.926 -0.488,-2.321 -2.125,-2.387c1.076,-0.145 2.118,-0.647 2.118,-2.153c0,-1.848 -1.464,-2.85 -3.576,-2.85l-3.168,0l0,9.238Zm1.82,-5.027l0,-2.721l1.348,-0c1.056,-0 1.756,0.436 1.756,1.36c0,0.925 -0.7,1.361 -1.756,1.361l-1.348,-0Z"
+                style="fill-rule:nonzero;" />
+            <path
+                rendering="geometricPrecision"
+                d="M4.67,35.85c2.641,-0 4.645,-1.794 4.645,-4.831c0,-3.037 -2.004,-4.83 -4.645,-4.83c-2.641,-0 -4.646,1.793 -4.646,4.83c0,3.037 2.005,4.831 4.646,4.831Zm-2.826,-4.831c0,-1.98 1.109,-3.34 2.826,-3.34c1.716,-0 2.825,1.36 2.825,3.34c0,1.981 -1.109,3.341 -2.825,3.341c-1.717,-0 -2.826,-1.36 -2.826,-3.341Z"
+                style="fill-rule:nonzero;" />
+            <path
+                rendering="geometricPrecision"
+                d="M23.401,35.638l1.966,0l-0,-9.238l-1.834,0l0,6.454l-4.067,-6.454l-1.965,0l0,9.238l1.833,0l0,-6.453l4.067,6.453Z"
+                style="fill-rule:nonzero;" />
+            <path
+                rendering="geometricPrecision"
+                d="M34.014,35.638l6.176,0l0,-1.49l-4.356,0l0,-2.562l3.564,-0l0,-1.49l-3.564,0l0,-2.206l4.356,-0l0,-1.49l-6.176,0l0,9.238Z"
+                style="fill-rule:nonzero;" />
+        </g>
+    </svg>
+
+  </div>
+  <!-- Loading Page Scripts -->
+  <script>
+    anime({
+      targets: '.main-logo path',
+      strokeDashoffset: [anime.setDashoffset, 0],
+      easing: 'easeInCubic',
+      duration: 1000,
+      opacity: [0, 1],
+      delay: 0,
+      direction: 'alternate',
+      loop: true
+    });
+    anime({
+      targets: '.progress',
+      keyframes: [
+        { width: '0%', background: '#585858' },
+        { width: '20%' },
+        { width: '50%' },
+        { width: '70%' },
+        { width: '85%' },
+        { width: '95%' },
+        { width: '100%', background: '#fff', }
+      ],
+      easing: 'easeOutElastic(1, .8)',
+      duration: 2600,
+    });
+  </script>
+
+	<main class="app">
+
+    <div id="overlay-menu"></div>
+
+    <div id="main-page" data-site-container>
+
+      <!-- Left -->
+      <div class="page--left-column">
+
+        <div id="burger" class="hamburger hamburger--arrowalt mouse-big">
+          <div class="hamburger-box">
+            <div class="hamburger-inner"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right -->
+      <div id="viewport" class="page--right-column">
+
+          <!-- Navbar -->
+          <div id="navbar">
+            <div class="row">
+              <div class="left">
+                <a href="/" title="home" class="mouse-big">
+                  <img src="./assets/triangle-logo.svg" alt="throne" />
+                </a>
+              </div>
+              <div class="center">
+                <ul>
+                  <li class="active mouse-big"><a href="/" title="home" class="mouse-big">init</a></li>
+                  <li class="mouse-big"><a href="#projects" title="projects" class="mouse-big">projects</a></li>
+                  <li class="mouse-big"><a href="#about" title="about" class="mouse-big">about</a></li>
+                  <li class="mouse-big"><a href="#contact" title="contact">about</a></li>
+                </ul>
+              </div>
+              <div class="right">
+                <span class="p">Website Design &amp; <br /> Development</span>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Mobile Navbar -->
+          <div id="navbar-mobile">
+            <div id="burger" class="hamburger hamburger--arrowalt">
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+     
+          <!-- Landing -->
+          <section class="landing">
+
+            <!-- Hero -->
+            <div class="hero">
+              <div class="row">
+                  <div class="hero-title">
+                    <p class="title-frag">We develop <span class="accent mouse-big">awesome</span></p>
+                    <p class="title-frag">Websites <span class="extended-dash">------</span> &nbsp; and design</p>
+                    <p class="title-frag"><span class="accent mouse-big">helpful</span> Graphics that</p>
+                    <p class="title-frag">make your job <span class="accent mouse-big">easier</span></p>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Lower Third -->
+            <div class="lower">
+
+              <!-- Text -->
+              <div class="text-column">
+                <p class="p">
+                  modern technology can be leveraged to elevate your business. take a moment to scroll through our recent work to see ways we can help design your success.
+                </p>
+              </div>
+
+              <!-- Work -->
+              <div class="work-column">
+                <a href="#projects">
+                  <svg class="work" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                  viewBox="0 0 500 500">
+                    <g id="UrTavla">
+                      <ellipse style="fill: none; stroke:#383838;stroke-width:2px;stroke-miterlimit:10;" cx="51%" cy="49%" rx="260" ry="120">
+                      </ellipse>
+                      <text class="accent mouse-big" x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">Work</text>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Arrow -->
+              <div class="arrow-column">
+                <a href="#blocks">
+                  <svg class="arrow mouse-big" width="100%" height="100%" viewBox="0 0 41 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+                    <g transform="matrix(1,0,0,1,-4318,-504)">
+                        <g transform="matrix(1,0,0,1,3044.25,73.8531)">
+                            <g id="arrow">
+                                <g id="Path_10" transform="matrix(1,0,0,1,-3859,84.744)">
+                                    <path d="M5139,351.843L5166.68,379.523" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:3px;"/>
+                                </g>
+                                <g id="Path_11" transform="matrix(1,0,0,1,-3857.72,85.934)">
+                                    <path d="M5165.4,360L5165.4,379.528L5147.75,379.528" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:3px;"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+
+          </section>
+
+          <div class="anime__line-horizontal"></div>
+
+          <!-- Three Blocks -->
+          <div id="blocks" class="blocks horizontal-liner">
+            <div class="row">
+
+              <div class="block mouse-big">
+                <img class="background" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="Interface Design" />
+                <div>
+                  <h3 class="section-title">Interface <span class="accent">Design</span></h3>
+                  <p class="p">
+                    websites, apps, desktop apps, dashboards
+                  </p>
+                </div>
+              </div>
+
+              <div class="anime__line-vertical"></div>
+
+              <div class="block mouse-big">
+                <img class="background" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="Interface Design" />
+                <div>
+                  <h3 class="section-title">Website <span class="accent">Development</span></h3>
+                  <p class="p">
+                    traditional websites, wordpress themes, shopify themes, react.js, gatsby
+                  </p>
+                </div>
+              </div>
+
+              <div class="anime__line-vertical"></div>
+
+              <div class="block mouse-big">
+                <img class="background" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="Interface Design" />
+                <div>
+                  <h3 class="section-title">Business <span class="accent">Design</span></h3>
+                  <p class="p">
+                    pitch decks, brand guidelines, packaging, tradeshow, merchandise
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="anime__line-horizontal"></div>
+
+          <!-- Marquee -->
+          <div id="marquee">
+            <div class="marquee">
+              <div class="marquee__inner" aria-hidden="true">
+                <span>throne is a design studio based in napa, california. we focus on minimalistic aesthetics to achieve clean and organized websites that generate leads from all device sizes. throne is a design studio based in napa, california. we focus on minimalistic aesthetics to achieve clean and organized websites that generate leads from all device sizes. throne is a design studio based in napa, california. we focus on minimalistic aesthetics to achieve clean and organized websites that generate leads from all device sizes. </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="anime__line-horizontal"></div>
+
+          <!-- Projects -->
+          <section id="projects" class="projects">
+            <div class="grid">
+
+              <h3 class="section-title">Recent <span class="accent">Projects</span></h3>
+
+              <div class="grid-items">
+                <div data-project="usal" draggable="false" class="link">
+                  <div class="text">
+                    <h1 class="h1 title-frag mouse-big">Usal Project</h1><span class="accent title-frag">01</span>
+                  </div>
+                  <img class="content__img" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="img1" />
+                </div>
+              </div>
+
+              <div class="anime__line-horizontal-from-left trigger"></div>
+
+              <div class="grid-items">
+                <div data-project="aiags" draggable="false" class="link">
+                  <div class="text">
+                    <h1 class="h1 title-frag mouse-big">All Is A Gentle Spring</h1><span class="accent title-frag">02</span>
+                  </div>
+                  <img class="content__img" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/The_Sun.jpg" alt="img2"/>
+                </div>
+              </div>
+
+              <div class="anime__line-horizontal-from-left trigger"></div>
+
+              <div class="grid-items">
+                <div data-project="dominic" draggable="false" class="link">
+                  <div class="text">
+                    <h1 class="h1 title-frag mouse-big">Dominic Fike</h1><span class="accent title-frag">03</span>
+                  </div>
+                  <img class="content__img" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="img3" />
+                </div>
+              </div>
+
+              <div class="anime__line-horizontal-from-left trigger"></div>
+
+              <div class="grid-items">
+                <div data-project="nappy" draggable="false" class="link">
+                  <div class="text">
+                    <h1 class="h1 title-frag mouse-big">Nappy Boy Ent.</h1><span class="accent title-frag">04</span>
+                  </div>
+                  <img class="content__img" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="img3" />
+                </div>
+              </div>
+
+              <div class="anime__line-horizontal-from-left trigger"></div>
+
+              <div class="grid-items">
+                <div data-project="fomo" draggable="false" class="link">
+                  <div class="text">
+                    <h1 class="h1 title-frag mouse-big">Fomo Farm</h1><span class="accent title-frag">05</span>
+                  </div>
+                  <img class="content__img" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="img3" />
+                </div>
+              </div>
+
+              <div class="anime__line-horizontal-from-left"></div>
+
+            </div>
+          </section>
+
+          <div class="backtotop-trigger"></div>
+
+          <!-- Contact -->
+          <section class="contact">
+            <div class="row">
+              <div class="text">
+                <p class="title-frag">Ready to <span class="accent">get going</span>(?)</p><br />
+                <p class="title-frag"><span class="accent">email us</span> by clicking</p><br />
+                <p class="title-frag">on this <img src="./assets/arrow-styled.svg" /> <a href="mailto:contact@throne.work" title="email"><span class="accent">link</span></a></p>
+              </div>
+            </div>
+          </section>
+
+          <div class="static__line-horizontal"></div>
+
+          <!-- Footer -->
+          <footer>
+            <div class="row">
+              <div>
+                <ul>
+                  <li><a class="p" href="#" title="">behance</a></li>
+                  <li><a class="p" href="" title="">dribbble</a></li>
+                  <li><a class="p" href="" title="">instagram</a></li>
+                </ul>
+              </div>
+              <div>
+                <span class="p">2022</span>
+              </div>
+            </div>
+          </footer>
+
+      </div><!-- / right -->
+
+    </div>
+
+  </main>
+
+    <!-- Case Studies: Usal -->
+    <div id="usal" class="case-study">
+      <div class="row">
+        <div class="left vertical-liner">
+          <span class="close-cs">
+            <div class="closer mouse-big">
+              <span class="one">&nbsp;</span>
+              <span class="two">&nbsp;</span>
+            </div>
+          </span>
+        </div>
+        <div class="case-study-right">
+          <h2 class="title animator">WordPress Theme<br />for <span class="accent mouse-big">"Usal Project"</span><br />2021</h2>
+
+          <div class="cs-lower">
+            <div>
+              <p class="p">
+                Usal Project is an experiences company based in Los Angeles, California. They began with the goal of organizing events for like minded people to meet, learn and experience new things. They offer in-person meet ups for all types of activities like Art shows, Yoga Classes, Backpacking, Fishing and way more.
+              </p>
+            </div>
+            <div class="client">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 300 500">
+                <g id="UrTavla">
+                  <ellipse style="fill: none; stroke:#383838;stroke-width:2px;stroke-miterlimit:10;" cx="51%" cy="49%" rx="260" ry="120">
+                  </ellipse>
+                  <text class="accent mouse-big" x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">Client</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cs-horizontal-line one"></div>
+
+          <div class="cs-section brief">
+            <span class="accent">01</span>
+            <h3>Brief</h3>
+            <p class="p">
+              The initial idea for this project would be for us to create a startup WordPress page, with some merchandise and three categories of products that would be repurposed as Events. There would need to be a full calendar view, and a more compact widget that goes on the home page. Products would be organized as Escape (trips), Learn (classes), and Goods (merchandise).
+            </p>
+          </div>
+
+          <div class="cs-horizontal-line two"></div>
+
+          <div class="">
+            <img class="fullwidth" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="" />
+          </div>
+
+          <div class="cs-horizontal-line three"></div>
+          
+          <div class="cs-section functionality">
+            <span class="accent">02</span>
+            <h3>Functionality</h3>
+            <p class="p">
+              The main piece of the project was organizing their different events into categories, then creating a custom Taxonomy for each. With a custom Taxonomy, rather than custom product Categories, we would be able to utilize the built-in permalink structure that WordPress prefers to use. For example, if ‘Hiking Trips’ were a regular product category, we would need to rewrite the default shop page to not display Hiking Trips. In addition we’d need to rewrite the default shop categories pages to not display ‘Hiking Trips’, then write additional shop archive and category pages for those types of events. The result gave us a clean URL system, like /escape/our-trip-name, or /learn/our-inperson-class-name, rather than /shop/categories/escape/our-trip-name.
+            </p>
+          </div>
+
+          <div class="cs-horizontal-line four"></div>
+
+          <div class="cs-section technology">
+            <span class="accent">03</span>
+            <h3>Technology</h3>
+            <p class="p">
+              We decided to stick with WordPress on the first version of the site, because it seemed like this would be the more cost effective route, and frankly time effective because we were more experienced with WordPress at the time. So the bulk of the functionality comes from WooCommerce. The events utilize Google Calendar for all the scheduling details. The information is pulled from Google using a minimal iCal calendar plugin that maps the data to a calendar. The calendar was then reformated using CSS and JavaScript to suite the original design.
+            </p>
+          </div>
+
+          <div class="cs-section links">
+            <h3>Links</h3>
+            <ul>
+              <li>
+                <a class="p" href="https://www.usalproject.com/" title="Usal Project">
+                  https://www.usalproject.com/
+                </a>
+              </li>
+              <li>
+                <a class="p" href="https://www.instagram.com/usalproject/" title="Usal Project">
+                  https://www.instagram.com/usalproject/
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cs-horizontal-line five"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Studies: AIAGS -->
+    <div id="aiags" class="case-study">
+      <div class="row">
+        <div class="left vertical-liner">
+          <span class="close-cs">
+            <div class="closer mouse-big">
+              <span class="one">&nbsp;</span>
+              <span class="two">&nbsp;</span>
+            </div>
+          </span>
+        </div>
+        <div class="case-study-right">
+          <h2 class="title animator">Shopify Theme<br />for <span class="accent mouse-big">"All Is A Gentle Spring"</span><br />2022</h2>
+
+          <div class="cs-lower">
+            <div>
+              <p class="p">
+                all is a gentle spring is an Australian label founded in 2018. The label warps, condenses and clarifies the vernacular of costume history; borrowing methods and materials from the theatre workshop and transposing them into the world of ready-to-wear.
+              </p>
+            </div>
+            <div class="client">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 300 500">
+                <g id="UrTavla">
+                  <ellipse style="fill: none; stroke:#383838;stroke-width:2px;stroke-miterlimit:10;" cx="51%" cy="49%" rx="260" ry="120">
+                  </ellipse>
+                  <text class="accent mouse-big" x="50%" y="50%" text-anchor="middle" fill="#fff" dy=".3em">Client</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="cs-horizontal-line one"></div>
+
+          <div class="cs-section brief">
+            <span class="accent">01</span>
+            <h3>Brief</h3>
+            <p class="p">
+              Our job was to format a Shopify theme that was already partially created. Apparently, the first developer ran into some issues and they needed someone to come in a get a few things working. The first was the overall layout of the site, it didn’t match the design provided. In addition, we needed some hover effects, custom fonts and various alignment changes.
+            </p>
+          </div>
+
+          <div class="cs-horizontal-line two"></div>
+
+          <div class="">
+            <img class="fullwidth" src="https://www.shutterstock.com/image-vector/baby-devil-cartoon-vector-illustration-260nw-1593380353.jpg" alt="" />
+          </div>
+
+          <div class="cs-horizontal-line three"></div>
+          
+          <div class="cs-section functionality">
+            <span class="accent">02</span>
+            <h3>Functionality</h3>
+            <p class="p">
+              Their business goals don’t stray far from what Shopify provided by default, so there was not much to do in the backend, besides categories the products to show up the way they wanted. I also added a metafield for the product image swap on hover for the Archive page.
+            </p>
+          </div>
+
+          <div class="cs-horizontal-line four"></div>
+
+          <div class="cs-section technology">
+            <span class="accent">03</span>
+            <h3>Technology</h3>
+            <p class="p">
+              This theme was built using Shopify and their CLI locally. The project is integrated with GitHub and has continous deployment set up. 
+            </p>
+          </div>
+
+          <div class="cs-section links">
+            <h3>Links</h3>
+            <ul>
+              <li>
+                <a class="p" href="https://gentlespring.co/" title="Website">
+                  https://gentlespring.co/
+                </a>
+              </li>
+              <li>
+                <a class="p" href="https://www.instagram.com/allisagentlespring/" title="Instagram">
+                  https://www.instagram.com/allisagentlespring/
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="cs-horizontal-line five"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Studies: Dominic -->
+    <div id="dominic" class="case-study">
+      <div class="row">
+        <div class="left">
+
+        </div>
+        <div class="right">
+          <span class="close-cs">
+            <img src="./assets/arrow-styled.svg" />
+          </span>
+          <h2>Dominic Fike</h2>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Case Studies: Nappy -->
+    <div id="nappy" class="case-study">
+      <div class="row">
+        <div class="left">
+
+        </div>
+        <div class="right">
+          <span class="close-cs">
+            <img src="./assets/arrow-styled.svg" />
+          </span>
+          <h2>Nappy Boy Ent.</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Studies: Fomo -->
+    <div id="fomo" class="case-study">
+      <div class="row">
+        <div class="left">
+
+        </div>
+        <div class="right">
+          <span class="close-cs">
+            <img src="./assets/arrow-styled.svg" />
+          </span>
+          <h2>Fomo</h2>
+        </div>
+      </div>
+    </div>
+
+  <!-- Back to Top -->
+  <div class="back-to-top">
+    <a class="backtop-link" href="#main-page">
+        <svg class="arrow mouse-big" width="100%" height="100%" viewBox="0 0 41 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+          <g transform="matrix(1,0,0,1,-4318,-504)">
+              <g transform="matrix(1,0,0,1,3044.25,73.8531)">
+                  <g id="arrow">
+                      <g id="Path_10" transform="matrix(1,0,0,1,-3859,84.744)">
+                          <path d="M5139,351.843L5166.68,379.523" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:3px;"/>
+                      </g>
+                      <g id="Path_11" transform="matrix(1,0,0,1,-3857.72,85.934)">
+                          <path d="M5165.4,360L5165.4,379.528L5147.75,379.528" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:3px;"/>
+                      </g>
+                  </g>
+              </g>
+          </g>
+        </svg>
+    </a>
+  </div>
+
+  <div class="cursor-dot-outline"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+
+  <!-- Vendor -->
+  <script src="src/js/vendor/slickscroll.min.js"></script>
+  <script src="src/js/vendor/imagesloaded.pkgd.min.js"></script>  
+  <script src="src/js/vendor/three.min.js"></script>
+  <script src="src/js/vendor/TweenLite.min.js"></script>
+ 
+
+  <!-- Inertia Scrolling -->
+  <script type="text/javascript"> 
+    // Page Inertia
+    var slick = new slickScroll.default;
+    var root = document.querySelector('.app');
+
+    slick.momentumScroll({
+        root: root,
+        duration: 1200,
+    });
+    document.body.style.overflowX = "hidden";
+
+    // Case Study Inertia
+    var xslick = new slickScroll.default;
+    var xroot = document.querySelector('.case-study-right');
+
+    xslick.momentumScroll({
+        root: xroot,
+        duration: 900,
+    });
+    xroot.overflowX = "hidden";
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  
+
+  <!-- Bundle -->
+  <script src="dist/scripts-min.js"></script>
+
+
+  <!-- Ripples -->
+  <script src="ripples.js"></script>
+  <script>
+    $('.block').ripples({
+      resolution: 600,
+    });
+    $('.loading').ripples({
+      resolution: 500,
+    });
+  </script>
+
+  <!-- Scroll Magic -->
+  <script>
+
+  </script>
+
+</body>
+
+</html>

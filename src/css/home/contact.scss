@@ -1,0 +1,40 @@
+.contact {
+
+}
+.contact .row {
+    padding: 10px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .text p {
+    text-transform: lowercase;
+    font-size: 7vw;
+    letter-spacing: -.6vw;
+    word-spacing: 1px;
+    line-height: 90%;
+    text-align: center;
+    white-space: nowrap;
+}
+.contact .text span.accent {
+    letter-spacing: -1px;
+}
+.contact img {
+    max-width: 140px;
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 767px) {
+    .contact h2 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        word-spacing: -2px;
+        line-height: 98%;
+    }
+    .contact img {
+        max-width: 80px;
+    }
+}

@@ -1,0 +1,147 @@
+/* First Fold */
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.hero .row {
+    display: flex;
+    align-items: center;
+}
+
+/* Upper */
+.hero-title p {
+    text-transform: lowercase;
+    font-size: 7vw;
+    letter-spacing: -0.6vw;
+    word-spacing: 1px;
+    line-height: 90%;
+    text-align: center;
+    white-space: nowrap;
+}
+.hero-title span.accent {
+    letter-spacing: -1px;
+}
+.hero .extended-dash {
+    letter-spacing: -2rem;
+}
+
+/* Lower */
+.lower {
+    display: grid;
+    grid-template-columns: 8fr 3fr 1fr;
+    align-items: center;
+    grid-gap: 20px;
+    padding: 0 var(--column-padding) 20px var(--column-padding);
+}
+.lower p {
+    font-size: 1.1rem;
+    letter-spacing: -0.5px;
+    padding-right: 10%;
+}
+.lower a {
+    display: block;
+}
+
+
+/* Work */
+.lower .work-column {
+    text-align: center;
+}
+svg.work {
+    max-width: 160px;
+    margin: 0 auto;
+}
+svg.work text {
+    font-size: 8rem;
+}
+
+/* Arrow */ 
+svg.arrow {
+    width: 80%;
+    max-width: 80px;
+    float: right;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1350px) {
+    .hero-title {
+        text-transform: lowercase;
+        font-size: 5rem;
+        letter-spacing: -2px;
+        word-spacing: -3px;
+        line-height: 98%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .hero-title {
+        text-transform: lowercase;
+        font-size: 4rem;
+        letter-spacing: -2px;
+        word-spacing: -2px;
+        line-height: 98%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .landing {
+        height: 100vh;
+    }
+    .hero h2 {
+        font-size: 2rem;
+        letter-spacing: -1px;
+        word-spacing: -2px;
+        line-height: 98%;
+    }
+    .hero .extended-dash {
+        letter-spacing: -12px;
+    }
+    svg.work {
+        width: 80%;
+        margin: 0 auto;
+    }
+    svg.arrow {
+        width: 60%;
+        max-width: 140px;
+        float: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .lower {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 2fr;
+        grid-gap: 0px;
+    }
+    .lower p {
+        padding: 0;
+    }
+    .lower .text-column { 
+        grid-area: 1 / 1 / span 1 / span 3;
+    }
+    .lower .work-column {
+        grid-area: 2 / 1 / span 1 / span 2;
+    }
+    .lower .arrow-column {
+        text-align: center;
+        grid-area: 2 / 3 / span 1 / span 1;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    
+}

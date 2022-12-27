@@ -1,0 +1,18 @@
+footer .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px var(--column-padding) 40px var(--column-padding);
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    footer .row {
+        padding: 0 var(--column-padding) 10px var(--column-padding);
+    }
+    
+}

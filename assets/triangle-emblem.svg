@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 272 309" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1;">
+    <g transform="matrix(1,0,0,1,-1490,-1609)">
+        <g transform="matrix(1,0,0,1,4,1201)">
+            <g transform="matrix(1.66282,-0.530369,0.518923,1.62693,-2079.02,-1651.51)">
+                <path d="M1603.75,1817.51C1606.03,1812.95 1610.61,1810.08 1615.62,1810.08C1620.63,1810.08 1625.22,1812.95 1627.49,1817.51C1643.43,1849.38 1671.46,1905.43 1686.33,1935.17C1688.44,1939.4 1688.25,1944.44 1685.83,1948.49C1683.4,1952.53 1679.1,1955 1674.45,1955C1643.63,1955 1587.61,1955 1556.79,1955C1552.14,1955 1547.84,1952.53 1545.41,1948.49C1542.99,1944.44 1542.8,1939.4 1544.91,1935.17C1559.78,1905.43 1587.81,1849.38 1603.75,1817.51Z" style="fill:rgb(25,25,25);stroke:rgb(56,56,56);stroke-width:1.16px;"/>
+            </g>
+            <g transform="matrix(0.773502,-0.246714,0.236127,0.740309,592.675,405.655)">
+                <text x="1092.65px" y="554.365px" style="font-family:'Uncut-Sans-Regular', 'Uncut Sans';font-size:55px;fill:white;">T</text>
+                <text x="1060.64px" y="613.226px" style="font-family:'Uncut-Sans-Regular', 'Uncut Sans';font-size:55px;fill:white;">H<tspan x="1125.04px " y="613.226px ">R</tspan></text>
+                <g transform="matrix(55,0,0,55,1192.91,672.087)">
+                </g>
+                <text x="1026.37px" y="672.087px" style="font-family:'Uncut-Sans-Regular', 'Uncut Sans';font-size:55px;fill:white;">O<tspan x="1095.62px 1162.77px " y="672.087px 672.087px ">NE</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
